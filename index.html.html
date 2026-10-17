@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Обжарка 48 — кофе, обжаренный позавчера</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f4ede2;--ink:#1d1510;--mute:#6f6256;--acc:#d9481c;--card:#fffaf2;--dark:#1d1510;--dink:#f4ede2;--line:rgba(29,21,16,.14);--r:22px;--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--s:clamp(52px,6.5vw,96px);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110d;--ink:#f4ede2;--mute:#a79a8c;--card:#221915;--line:rgba(244,237,226,.14);--dark:#0e0a07}}
+:root[data-theme="dark"]{--bg:#17110d;--ink:#f4ede2;--mute:#a79a8c;--card:#221915;--line:rgba(244,237,226,.14);--dark:#0e0a07}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.02;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(46px,8.4vw,128px);font-weight:800}
+h2{font-size:clamp(34px,5.4vw,76px)}
+p{margin:0}.wrap{width:min(1760px,100% - clamp(40px,6vw,120px));margin-inline:auto}
+section{padding-block:var(--s);position:relative}
+.eyebrow{font:700 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin-bottom:22px;display:block}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 28px;border-radius:99px;background:var(--acc);color:#fff;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:16px;font-family:var(--sans);transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--acc)}
+.btn i{transition:transform .3s;font-style:normal}.btn:hover i{transform:translateX(4px)}
+.ghost{background:none;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s}
+header.on{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font:800 22px var(--serif);text-decoration:none}.logo b{color:var(--acc)}
+nav{display:flex;gap:30px;align-items:center;font-size:15px;font-weight:500}nav a{text-decoration:none;color:var(--mute);transition:color .2s}nav a:hover{color:var(--ink)}nav .btn{min-height:44px;padding:0 20px;color:#fff;font-size:14px}
+/* hero */
+.hero{padding-top:116px;padding-bottom:36px;min-height:min(100svh,800px);display:flex;align-items:center;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:center}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--acc)}
+.hero p.lead{font-size:clamp(18px,1.5vw,24px);color:var(--mute);max-width:32em;margin:28px 0 36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;font-size:14px;color:var(--mute)}
+.trust span::before{content:"✓ ";color:var(--acc);font-weight:800}
+.art{position:relative;aspect-ratio:3/4;display:grid;place-items:center;max-height:80vh;justify-self:center;width:100%}
+.art .sun{position:absolute;width:118%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f08a4b,var(--acc) 55%,#8c2a0c);right:-20%;top:6%;opacity:.95}
+.art svg{position:relative;width:78%;filter:drop-shadow(0 40px 40px rgba(29,21,16,.35));transition:transform .2s}
+.stamp{position:absolute;left:-8%;bottom:12%;width:120px;height:120px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;text-align:center;font:800 13px/1.15 var(--sans);letter-spacing:.06em;text-transform:uppercase;animation:spin 20s linear infinite}
+.stamp b{display:block;font:800 34px var(--serif);letter-spacing:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stamp span{animation:spin 20s linear infinite reverse;display:block}
+.tick{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;background:var(--card)}.tick div{display:flex;width:max-content;animation:mq 34s linear infinite;font:italic 400 clamp(22px,2.4vw,32px) var(--serif)}.tick span{padding-right:44px;white-space:nowrap}.tick span::after{content:"✦";color:var(--acc);margin-left:44px;font-style:normal;font-size:.7em}@keyframes mq{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.tick div{animation:none}}
+/* problem */
+.prob .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.prob h2{grid-column:1/9}
+.prob .txt{grid-column:6/13;margin-top:16px;color:var(--mute);font-size:20px}
+.prob .txt strong{color:var(--ink)}
+.dates{grid-column:1/7;margin-top:30px;border-top:1px solid var(--line)}
+.dates div{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);font-size:18px}
+.dates s{color:var(--mute)}.dates b{color:var(--acc)}
+/* how */
+.how{background:var(--dark);color:var(--dink);border-radius:48px 48px 0 0}
+.how h2{max-width:11em}.steps{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.step{padding-top:30px;border-top:1px solid rgba(244,237,226,.25)}
+.step:nth-child(2){margin-top:28px}.step:nth-child(3){margin-top:56px}
+.step em{font:italic 400 80px/1 var(--serif);color:var(--acc);display:block;margin-bottom:14px}
+.step h3{font-size:28px;margin-bottom:10px}.step p{color:#b9ab9c}
+/* product */
+.prod{background:var(--dark);color:var(--dink);padding-top:0}
+.prod .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.tabs{display:flex;gap:8px;margin:28px 0 24px;flex-wrap:wrap}
+.tabs button{font:600 15px var(--sans);padding:12px 20px;border-radius:99px;border:1px solid rgba(244,237,226,.25);background:none;color:var(--dink);cursor:pointer;transition:.25s}
+.tabs button.on{background:var(--dink);color:var(--dark)}
+.panel{min-height:230px}.panel h3{font-size:34px;margin-bottom:12px}.panel p{color:#b9ab9c;margin-bottom:22px}
+.notes{display:flex;gap:10px;flex-wrap:wrap}.notes span{padding:8px 16px;border-radius:99px;background:rgba(244,237,226,.1);font-size:14px}
+.bars{margin-top:20px;display:grid;gap:10px;max-width:360px;font-size:13px;color:#b9ab9c}
+.bars div{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:12px}.bars i{display:block;height:6px;border-radius:9px;background:rgba(244,237,226,.12);overflow:hidden}.bars i::after{content:"";display:block;height:100%;width:var(--v);background:var(--acc);border-radius:9px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.vis{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,#3a2a20,#120c08 70%);display:grid;place-items:center;position:relative}
+.vis svg{width:62%;transition:transform .6s}
+.vis .tag{position:absolute;right:2%;top:10%;background:var(--acc);color:#fff;padding:10px 18px;border-radius:99px;font-weight:700;font-size:14px;transform:rotate(6deg)}
+/* proof */
+.quote{font:italic 400 clamp(28px,4.2vw,58px)/1.15 var(--serif);max-width:20em;letter-spacing:-.01em}
+.quote small{display:block;font:500 15px var(--sans);font-style:normal;color:var(--mute);margin-top:22px;letter-spacing:0}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:40px 0 0 auto;max-width:760px}
+.mini p{padding-left:22px;border-left:2px solid var(--acc);color:var(--mute)}.mini b{display:block;color:var(--ink);margin-top:10px;font-size:14px}
+.note{margin-top:40px;font-size:13px;color:var(--mute)}
+/* price */
+.price h2{margin-bottom:0}.plans{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;align-items:end}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:34px;transition:transform .35s}
+.plan:hover{transform:translateY(-6px)}
+.plan.top{background:var(--ink);color:var(--bg);padding:44px 34px;border:0}
+.plan .n{font:600 14px var(--sans);letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.plan .p{font:800 54px var(--serif);margin:14px 0 4px}.plan .p small{font:500 16px var(--sans);opacity:.6}
+.plan ul{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:10px;font-size:15px}.plan li::before{content:"— ";color:var(--acc)}
+.plan .btn{width:100%;justify-content:center}.plan:not(.top) .btn{background:none;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.flag{display:inline-block;background:var(--acc);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:99px;margin-bottom:12px}
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+details{border-bottom:1px solid var(--line);padding:24px 0}details:first-child{border-top:1px solid var(--line)}
+summary{font:600 22px var(--serif);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--acc);font-size:28px;line-height:1;transition:transform .3s}details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);margin-top:14px;max-width:38em}
+/* final */
+.final{background:var(--acc);color:#fff;border-radius:48px 48px 0 0;overflow:hidden}
+.final .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.final h2{font-size:clamp(40px,6.4vw,92px)}.final p{margin-top:22px;font-size:19px;opacity:.9;max-width:26em}
+form{background:var(--bg);color:var(--ink);border-radius:var(--r);padding:34px;display:grid;gap:14px}
+label{font-size:13px;font-weight:700;color:var(--mute)}
+input{width:100%;height:56px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:0 18px;font:500 16px var(--sans);margin-top:6px}input:focus{outline:2px solid var(--acc);border-color:transparent}
+form .btn{justify-content:center}.fine{font-size:13px;color:var(--mute);text-align:center}
+.ok{display:none;text-align:center;padding:30px 0;font:600 26px var(--serif)}
+footer{background:var(--acc);color:#fff;padding:0 0 40px}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:34px;border-top:1px solid rgba(255,255,255,.3);font-size:14px}
+footer a{margin-right:20px;text-decoration:none}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.stamp,.stamp span{animation:none}html{scroll-behavior:auto}}
+@media(max-width:900px){nav a:not(.btn){display:none}
+.hero{padding-top:110px}.hero .wrap,.prod .wrap,.faq .wrap,.final .wrap{grid-template-columns:1fr}
+.art{max-width:380px;margin:20px auto 0}.stamp{left:0;width:96px;height:96px;font-size:11px}.stamp b{font-size:26px}
+.prob h2,.prob .txt,.dates{grid-column:1/-1}.steps{grid-template-columns:1fr}.step:nth-child(n){margin-top:0}
+.plans{grid-template-columns:1fr}.mini{grid-template-columns:1fr}.vis{max-width:420px;margin:auto}.how,.final{border-radius:32px 32px 0 0}}
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap"><a class="logo" href="#top">Обжарка<b>48</b></a><nav><a href="#how">Как это работает</a><a href="#beans">Кофе</a><a href="#price">Цены</a><a href="#faq">Вопросы</a><a class="btn" href="#order">Заказать</a></nav></div></header>
+
+<section class="hero" id="top"><div class="wrap">
+<div>
+<span class="eyebrow rv">Кофейная подписка · обжарка под заказ</span>
+<h1 class="rv">Кофе, который обжарили <em>позавчера</em></h1>
+<p class="lead rv">Обжариваем по понедельникам и четвергам, упаковываем в день обжарки и довозим за 48 часов. На каждой пачке — настоящая дата, а не «годен до».</p>
+<div class="cta rv"><a class="btn" href="#order">Собрать первый набор <i>→</i></a><a class="btn ghost" href="#how">Как это устроено</a></div>
+<div class="trust rv"><span>Дата обжарки на каждой пачке</span><span>Пауза в один клик</span><span>Не зашло — заменим</span></div>
+</div>
+<div class="art rv"><div class="sun" data-p=".04"></div>
+<svg id="bag" viewBox="0 0 300 400" aria-label="Пачка кофе Обжарка 48"><path d="M40 40h220l14 340a10 10 0 0 1-10 10H36a10 10 0 0 1-10-10z" fill="#1d1510" stroke="#f4ede2" stroke-width="3"/><path d="M40 40h220l2 40H38z" fill="#2c211a"/><path d="M50 40v-18h200v18" fill="none" stroke="#f4ede2" stroke-width="3"/><circle cx="150" cy="190" r="70" fill="#d9481c"/><path d="M118 190q32-60 64 0q-32 60-64 0z" fill="#1d1510"/><path d="M150 140q-14 50 0 100" fill="none" stroke="#d9481c" stroke-width="5"/><text x="150" y="305" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="800" font-size="34" fill="#f4ede2">Обжарка 48</text><text x="150" y="335" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" letter-spacing="3" fill="#f4ede2" opacity=".7">ОБЖАРЕНО · 12.05</text></svg>
+<div class="stamp"><span><b>48</b>часов<br>до двери</span></div></div>
+</div></section>
+
+<div class="tick" aria-hidden="true"><div><span>Цитрус</span><span>Тёмный шоколад</span><span>Мёд</span><span>Печёное яблоко</span><span>Карамель</span><span>Белая смородина</span><span>Какао</span><span>Цитрус</span><span>Тёмный шоколад</span><span>Мёд</span><span>Печёное яблоко</span><span>Карамель</span><span>Белая смородина</span><span>Какао</span></div></div>
+
+<section class="prob"><div class="wrap">
+<h2 class="rv">Пачка в магазине — это кофе, которому уже месяцы</h2>
+<div class="dates rv"><div><span>Дата обжарки</span><s>не указана</s></div><div><span>Путь до полки</span><s>склад → дистрибьютор → магазин</s></div><div><span>У нас</span><b>обжарка → курьер → вы</b></div></div>
+<p class="txt rv">Зёрна теряют аромат уже через несколько недель после обжарки. Поэтому дорогой кофе из супермаркета часто даёт плоский вкус — <strong>вы платите за название, а не за свежесть.</strong> Мы убрали из цепочки всё, что стоит между жаровней и вашей кофемолкой.</p>
+</div></section>
+
+<section class="how" id="how"><div class="wrap">
+<span class="eyebrow">Как это работает</span>
+<h2 class="rv">Три шага, и кофе всегда свежий</h2>
+<div class="steps">
+<div class="step rv"><em>1</em><h3>Скажите, как варите</h3><p>Воронка, аэропресс, рожковая или турка — выберем помол и профиль. Две минуты, без анкет на десять экранов.</p></div>
+<div class="step rv"><em>2</em><h3>Мы обжариваем под вас</h3><p>Партию жарим после заказа, а не кладём на склад. Дату ставим на пачку вручную.</p></div>
+<div class="step rv"><em>3</em><h3>Курьер, и вы пьёте</h3><p>Доставка в течение 48 часов. Следующая — по вашему ритму: каждую неделю, две или раз в месяц.</p></div>
+</div></div></section>
+
+<section class="prod" id="beans"><div class="wrap">
+<div><span class="eyebrow">Кофе</span><h2 class="rv">Три профиля. Один найдёте с первого раза</h2>
+<div class="tabs" role="tablist"><button class="on" data-i="0">Фильтр</button><button data-i="1">Эспрессо</button><button data-i="2">Универсал</button></div>
+<div class="panel" id="panel"></div></div>
+<div class="vis rv"><span class="tag" id="tag">Светлая обжарка</span>
+<svg viewBox="0 0 200 200" id="bean"><ellipse cx="100" cy="100" rx="62" ry="84" transform="rotate(25 100 100)" fill="#6a3b1f" id="beanfill"/><path d="M100 28q-34 70 6 144" transform="rotate(25 100 100)" fill="none" stroke="#1d1510" stroke-width="7" stroke-linecap="round"/><ellipse cx="78" cy="62" rx="14" ry="30" transform="rotate(25 78 62)" fill="#fff" opacity=".12"/></svg></div>
+</div></section>
+
+<section class="proof"><div class="wrap">
+<span class="eyebrow">Что говорят</span>
+<blockquote class="quote rv" style="margin:0">«Первый раз в жизни открыл пачку и почувствовал запах ещё до того, как насыпал в кофемолку.»<small>Артём, подписка на фильтр · демо-отзыв</small></blockquote>
+<div class="mini rv"><p>Раньше брала кофе в магазине и думала, что просто не умею заваривать. Оказалось, дело в зёрнах.<b>Марина · демо-отзыв</b></p><p>Удобно, что можно сдвинуть доставку на неделю, когда уезжаешь. Без звонков и объяснений.<b>Илья · демо-отзыв</b></p></div>
+<p class="note">Отзывы и цены на странице демонстрационные.</p>
+</div></section>
+
+<section class="price" id="price"><div class="wrap">
+<span class="eyebrow">Цена</span><h2 class="rv">Выберите ритм, остальное мы возьмём на себя</h2>
+<div class="plans" style="margin-top:36px">
+<div class="plan rv"><div class="n">Попробовать</div><div class="p">990 ₽</div><ul><li>1 пачка 250 г</li><li>Профиль на выбор</li><li>Без обязательств</li></ul><a class="btn" href="#order">Заказать</a></div>
+<div class="plan top rv"><span class="flag">Выбирают чаще всего</span><div class="n">Раз в две недели</div><div class="p">1 790 ₽<small> / доставка</small></div><ul><li>2 пачки по 250 г</li><li>Бесплатная доставка</li><li>Пауза и пропуск в один клик</li><li>Замена, если вкус не подошёл</li></ul><a class="btn" href="#order">Начать подписку <i>→</i></a></div>
+<div class="plan rv"><div class="n">Для компании</div><div class="p">от 3 200 ₽</div><ul><li>1 кг в месяц и больше</li><li>Помол под вашу кофемашину</li><li>Счёт для юрлица</li></ul><a class="btn" href="#order">Обсудить</a></div>
+</div></div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+<div><span class="eyebrow">Вопросы</span><h2 class="rv">Что обычно спрашивают</h2></div>
+<div class="rv">
+<details><summary>А если мне не понравится вкус?</summary><p>Напишите нам — подберём другой профиль и отправим замену. Первую пачку вы ничем не рискуете.</p></details>
+<details><summary>Можно ли остановить подписку?</summary><p>Да, в любой момент: пропуск, пауза или отмена. Никаких звонков и «удержаний».</p></details>
+<details><summary>Как понять, что кофе действительно свежий?</summary><p>На каждой пачке напечатана дата обжарки. Лучше всего кофе раскрывается через несколько дней после неё — как раз когда приезжает к вам.</p></details>
+<details><summary>У меня нет кофемолки</summary><p>Смолем под ваш способ заваривания. Просто выберите его при заказе.</p></details>
+</div></div></section>
+
+<section class="final" id="order"><div class="wrap">
+<div><h2 class="rv">Следующая чашка может быть лучше</h2><p class="rv">Оставьте имя и контакт — вернёмся с вариантом набора под ваш способ заваривания. Это ничего не стоит.</p></div>
+<form id="f" class="rv"><div><label for="n">Как вас зовут</label><input id="n" required autocomplete="given-name"></div><div><label for="c">Телефон или Telegram</label><input id="c" required autocomplete="tel"></div><button class="btn" type="submit">Получить подбор <i>→</i></button><div class="fine">Без спама. Один ответ от живого человека.</div><div class="ok" id="ok">Спасибо! Мы напишем вам сегодня.</div></form>
+</div></section>
+<footer><div class="wrap"><div><a class="logo" href="#top" style="margin-right:30px">Обжарка48</a></div><div><a href="#how">Как это работает</a><a href="#price">Цены</a><a href="#faq">Вопросы</a></div><div>hello@obzharka48.example · Telegram · Instagram</div></div></footer>
+
+<script>
+const hd=document.getElementById('hd');
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+const bag=document.getElementById('bag'),sun=document.querySelector('.sun');
+addEventListener('scroll',()=>{const y=scrollY;hd.classList.toggle('on',y>20);if(y<1200&&matchMedia('(prefers-reduced-motion:no-preference)').matches){bag.style.transform=`translateY(${y*-.06}px) rotate(${-4+y*.01}deg)`;sun.style.transform=`translateY(${y*.08}px)`}},{passive:true});
+const P=[
+{t:'Светлая обжарка',c:'#a0602f',h:'Яркий и чистый',p:'Для воронки и аэропресса. Много кислотности, мало горечи, вкус, который хочется разбирать.',n:['Цитрус','Белая смородина','Мёд'],b:[['Кислотность','85%'],['Сладость','65%'],['Плотность','35%']]},
+{t:'Средняя обжарка',c:'#6a3b1f',h:'Густой и сладкий',p:'Для рожковой кофеварки. Крепкая крема, шоколадная сладость, хорошо работает с молоком.',n:['Тёмный шоколад','Орех','Карамель'],b:[['Кислотность','35%'],['Сладость','80%'],['Плотность','85%']]},
+{t:'Универсальная',c:'#8a5028',h:'Один кофе на всё',p:'Если дома и воронка, и гейзерная кофеварка. Мягкий баланс без острых углов.',n:['Печёное яблоко','Какао','Бисквит'],b:[['Кислотность','50%'],['Сладость','70%'],['Плотность','60%']]}];
+const panel=document.getElementById('panel');
+function show(i){const d=P[i];panel.innerHTML=`<h3>${d.h}</h3><p>${d.p}</p><div class="notes">${d.n.map(x=>'<span>'+x+'</span>').join('')}</div><div class="bars">${d.b.map(x=>`<div>${x[0]}<i style="--v:0%" data-v="${x[1]}"></i></div>`).join('')}</div>`;
+document.getElementById('tag').textContent=d.t;document.getElementById('beanfill').setAttribute('fill',d.c);document.getElementById('bean').style.transform=`rotate(${i*40}deg)`;
+requestAnimationFrame(()=>requestAnimationFrame(()=>panel.querySelectorAll('i').forEach(e=>e.style.setProperty('--v',e.dataset.v))))}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');show(+b.dataset.i)});
+show(0);
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();[...e.target.children].forEach(c=>c.style.display='none');document.getElementById('ok').style.display='block'});
+</script>
+</body>
+</html>
